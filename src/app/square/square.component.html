@@ -1,0 +1,12 @@
+<div class="tp-box" 
+        [style.width.px]="width" 
+        [style.height.px]="height"
+        
+        (click)="toggleFlip()" [@flipState]="flip">
+  <div #backAnchor class="tp-box__side tp-box__front">
+    
+  </div>
+  <div  class="tp-box__side tp-box__back">
+    
+  </div>
+</div>

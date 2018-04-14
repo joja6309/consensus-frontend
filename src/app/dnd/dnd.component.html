@@ -1,0 +1,16 @@
+
+
+<!-- <button class="btn wht pull-left" style="margin:10px;padding:10px;">
+  <input class="wht" type="file" (change)="onFilesChange($event)">
+</button> -->
+
+
+<div class="dropzone" appDnd 
+(filesChangeEmiter)="onFilesChange($event)"
+[style.background]="imgSrc"
+>
+  <div class="text-wrapper">
+    <div class="centered">Drop your file here!</div>
+  </div>
+</div>
+

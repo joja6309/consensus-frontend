@@ -1,0 +1,57 @@
+
+    <div class="row">
+      <div class="col-lg-4">
+
+        <div style="margin-bottom:5px;height:30%;">
+          <!--display: block;margin: 0 auto;-->
+          <div #anchor1 id="anchor1" style="height:150px;width:150px;">
+          </div>
+        </div>
+        <app-slider #mySlider
+                    (rowChangeEmitter)="rowChangeHandler($event)"
+                    (colChangeEmitter)="colChangeHandler($event)">
+
+        </app-slider>
+        <hr>
+        <!-- (click)="setGrid($event.target) -->
+        <!-- <label id="set-grid-btn" class="btn btn-default btn-style shadow">
+          Set Grid
+        </label> -->
+        <button (click)="showDialog = !showDialog" (click)="setGrid()"id="set-grid-btn" class="btn btn-default btn-style shadow">Set Grid</button>
+
+        <app-dialog [(visible)]="showDialog">
+          <h1>Hello World</h1>
+          <ng-template #anchor3 class="shadow" style="height:560px;width:560px;display:block;margin: 0 0;">
+          </ng-template>
+        </app-dialog>
+
+      </div>
+        <div class="col" style="padding:30px;">
+          <div #anchor2 id="anchor2" class="shadow" style="height:560px;width:560px;display:block;margin: 0 0;" >
+           <!--  [hidden]="true"> -->
+            
+          </div>
+        </div>
+      </div>
+    
+    
+
+  <!--<div *ngIf="show; then thenBlock; else elseBlock">this is ignored</div>
+  <canvas #canvas1 class="shadow"
+          width="{{sizeSettings.sizes[sizeSettings.selectedSizeIndex].width}}"
+          height="{{sizeSettings.sizes[sizeSettings.selectedSizeIndex].height}}"
+          (click)="onClearOverlaysSelection()"></canvas>
+  <canvas #canvas2 class="shadow"
+          width="{{sizeSettings.sizes[sizeSettings.selectedSizeIndex].width}}"
+          height="{{sizeSettings.sizes[sizeSettings.selectedSizeIndex].height}}"
+          (click)="onClearOverlaysSelection()"></canvas>
+  <button (click)="show = !show">{{show ? 'hide' : 'show'}}</button>
+  <button (click)="switchPrimary()">Switch Primary</button>
+  show = {{show}}
+  <br>
+
+  <ng-template #primaryBlock>Primary text to show</ng-template>
+  <ng-template #elseBlock>Alternate text while primary text is hidden</ng-template>-->
+  <!--<app-overlay-logo [sizeSettings]="sizeSettings" [logoSettings]="logoSettings"></app-overlay-logo>-->
+  <!--<app-overlay-texts [sizeSettings]="sizeSettings" [textSettings]="textSettings"></app-overlay-texts>-->
+
